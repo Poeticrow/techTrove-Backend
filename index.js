@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./db");
 const productRoutes = require("./routes/productRoutes");
+const userRoutes = require("./routes/userRoutes");
 // FUNCTION CALLS
 const app = express();
 app.use(express.json());
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", productRoutes);
+app.use("/api", userRoutes);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
