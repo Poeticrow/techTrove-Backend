@@ -5,7 +5,7 @@ const gadgetSchema = new mongoose.Schema({
   image: { type: String, required: true },
   sale: { type: Boolean, default: false },
   price: { type: Number, required: true },
-  salePrice: { type: Number, default: null },
+  salePrice: { type: Number },
   category: { type: String, required: true },
 });
 
